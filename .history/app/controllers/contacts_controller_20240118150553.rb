@@ -2,9 +2,9 @@ class ContactsController < ApplicationController
   # before_action :set_contact, only: %i[ show edit update destroy ]
 
   # GET /contacts or /contacts.json
-  # def index
-  #   @contacts = Contact.all
-  # end
+  def index
+    @contacts = Contact.all
+  end
 
   # GET /contacts/1 or /contacts/1.json
   # def show
@@ -16,8 +16,8 @@ class ContactsController < ApplicationController
   end
 
   # GET /contacts/1/edit
-  # def edit
-  # end
+  def edit
+  end
 
   # POST /contacts or /contacts.json
   def create
@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to new_contact_path, notice: "Contact was successfully created." }
+        format.html { redirect_to contact_url(@contact), notice: "Contact was successfully created." }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,27 +35,27 @@ class ContactsController < ApplicationController
   end
 
   # PATCH/PUT /contacts/1 or /contacts/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @contact.update(contact_params)
-  #       format.html { redirect_to contact_url(@contact), notice: "Contact was successfully updated." }
-  #       format.json { render :show, status: :ok, location: @contact }
-  #     else
-  #       format.html { render :edit, status: :unprocessable_entity }
-  #       format.json { render json: @contact.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @contact.update(contact_params)
+        format.html { redirect_to contact_url(@contact), notice: "Contact was successfully updated." }
+        format.json { render :show, status: :ok, location: @contact }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /contacts/1 or /contacts/1.json
-  # def destroy
-  #   @contact.destroy
+  def destroy
+    @contact.destroy
 
-  #   respond_to do |format|
-  #     format.html { redirect_to contacts_url, notice: "Contact was successfully destroyed." }
-  #     format.json { head :no_content }
-  #   end
-  # end
+    respond_to do |format|
+      format.html { redirect_to contacts_url, notice: "Contact was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

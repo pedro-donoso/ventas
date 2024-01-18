@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only
   get '/home',    to:'pages#home'
   get 'terms',    to:'pages#terms'
   get 'privacy',  to:'pages#privacy'
