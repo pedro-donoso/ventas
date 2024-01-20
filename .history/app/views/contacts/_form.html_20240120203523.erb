@@ -22,9 +22,7 @@
     <%= form.label :email, style: "display: block" %>
     <%= form.email_field :email, 
     required: true,
-    pattern: "^[a-zA-Z0-9.!#$%&`*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
-    style: "text-transform:lowercase",
-    onkeyup: "javascript:this.value=this.value.toLowerCase();"
+    pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_``]"
     %>
   </div>
 
