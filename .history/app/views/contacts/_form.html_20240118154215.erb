@@ -20,17 +20,12 @@
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.email_field :email, 
-    required: true
-    %>
+    <%= form.text_field :email, require: true %>
   </div>
 
   <div>
     <%= form.label :message, style: "display: block" %>
-    <%= form.text_area :message, 
-    require: true, 
-    minlength: 10 
-    %>
+    <%= form.text_area :message, require: true, minlength: 10 %>
   </div>
 
   <div>

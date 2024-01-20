@@ -20,8 +20,9 @@
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.email_field :email, 
-    required: true
+    <%= form.text_field :email, 
+    require: true,
+    pattern: "^[a-zA-0-9.!#$%&]" 
     %>
   </div>
 
