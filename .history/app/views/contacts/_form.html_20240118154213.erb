@@ -14,26 +14,17 @@
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name, 
-    require: true 
-    %>
+    require: true %>
   </div>
 
   <div>
     <%= form.label :email, style: "display: block" %>
-    <%= form.email_field :email, 
-    required: true,
-    pattern: "^[a-zA-Z0-9.!#$%&`*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
-    style: "text-transform:lowercase",
-    onkeyup: "javascript:this.value=this.value.toLowerCase();"
-    %>
+    <%= form.text_field :email, require: true %>
   </div>
 
   <div>
     <%= form.label :message, style: "display: block" %>
-    <%= form.text_area :message, 
-    require: true, 
-    minlength: 10 
-    %>
+    <%= form.text_area :message, require: true, minlength: 10 %>
   </div>
 
   <div>
