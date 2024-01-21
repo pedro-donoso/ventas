@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-#   Validaciones    
+#validaciones    
 validates :name,    presence: true,
                     uniqueness: true
 validates :available, inclusion: { in: [true, false] }                   
