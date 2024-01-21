@@ -1,4 +1,4 @@
-![vista](https://github.com/pedro-donoso/ventas/assets/68760595/9500453a-4f15-4b54-ab1d-9bbd4f5a237c)
+![ventan](https://github.com/pedro-donoso/ventas/assets/68760595/55622b55-adb4-4790-8d36-a11dd1ef88ee)
 
 # README
 
