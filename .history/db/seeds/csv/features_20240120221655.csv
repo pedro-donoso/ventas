@@ -1,0 +1,7 @@
+feature_id,name,available
+1,Feature 1,true
+2,Feature 2,false
+3,Feature 3,true
+4,Feature 4,false
+5,Categoria 5,true
+6,Feature 6,false
