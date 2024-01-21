@@ -1,3 +1,5 @@
+![vista](https://github.com/pedro-donoso/ventas/assets/68760595/9500453a-4f15-4b54-ab1d-9bbd4f5a237c)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
